@@ -1,0 +1,69 @@
+/* Path: src/components/Notification/Notification.module.css */
+/* The css wrapper for our Notification component. */
+
+.notification {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 90%;
+    max-width: 1000px;
+    height: 54px;
+    padding: 9px 16px;
+
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: var(--tg-theme-section-bg-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.5s ease-out, opacity 0.4s ease-out;
+}
+
+.show {
+    bottom: 100px;
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100%);
+}
+
+.notification .notification_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification .notification_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification_content .notification_message {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.notification_message h1 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.notification_message p {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.notification_content .notification_action {
+    color: var(--tg-theme-link-color);
+    cursor: pointer;
+}
