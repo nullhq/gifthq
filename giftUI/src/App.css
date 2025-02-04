@@ -1,7 +1,7 @@
 /* Path: src/App.css */
 /* Basics styles for our app container with id #root. */
 #root {
-    max-width: 1280px;
+    max-width: 1000px;
     min-height: 100vh;
     margin: 0 auto;
     text-align: center;

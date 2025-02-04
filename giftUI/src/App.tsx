@@ -3,11 +3,18 @@
 
 import "./App.css";
 import Jump from "./components/Jump/Jump";
+import Store from "./pages/Store/Store";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App () {
     return (
         <>
-            <Jump />
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Store />} />
+                </Routes>
+                <Jump />
+            </BrowserRouter>
         </>
     );
 }
