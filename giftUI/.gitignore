@@ -10,7 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 src/assets/lotties
-src/assets/images
+src/assets/SVGs
 dist-ssr
 *.local
 
