@@ -1,0 +1,32 @@
+/* Path: src/components/Empty/Empty.module.css */
+/* The css wrapper for our Empty component. */
+
+.empty {
+    width: 100%;
+    height: 240px;
+    padding: 32px 16px;
+
+    border-radius: 8px;
+    background-color: var(--tg-theme-section-bg-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.empty .empty_message {
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.empty .empty_go_to {
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+
+    color: var(--tg-theme-link-color);
+}
