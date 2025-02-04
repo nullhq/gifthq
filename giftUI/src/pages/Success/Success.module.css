@@ -1,0 +1,50 @@
+/* Path: src/pages/Success/Success.module.css */
+/* The Css wrapper for our Success page. */
+
+.success {
+    width: 100%;
+    min-height: 100vh;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.success .success_gift {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.success_gift .success_gift_lottie_ctn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success_gift .success_gift_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.success_gift .success_gift_description h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.success_gift .success_gift_description p {
+    font-size: 17px;
+    letter-spacing: -.43px;
+    text-align: center;
+}
