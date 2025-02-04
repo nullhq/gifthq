@@ -1,4 +1,5 @@
 // Path: src/components/Jump/Jump.tsx
+// Our Jump component will be a tab navigation component that will be used to navigate between different sections of the app.
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import Lottie from "../Lottie/Lottie";
@@ -11,7 +12,7 @@ function Jump() {
 
     useEffect(() => {
         if (jumpRefs.current[activeTab]) {
-            const { offsetLeft, offsetWidth } = jumpRefs.current[activeTab]!;
+            const { offsetLeft, offsetWidth } = jumpRefs.current[activeTab];
             setUnderlineStyle({ left: offsetLeft, width: offsetWidth });
         }
     }, [activeTab]);
