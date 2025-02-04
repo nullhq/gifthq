@@ -1,0 +1,111 @@
+/* Path: src/pages/Store/Store.module.css */
+/* The CSS wrapper for our store page. */
+
+.store {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    padding: 10px;
+
+}
+
+.store .store_header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
+.store_header .store_header_gift_icon_and_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.store_header_gift_icon_and_title h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.store_header p {
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--tg-theme-subtitle-text-color);
+}
+
+.store .store_filter {
+    width: 100%;
+    display: flex;
+    /* gap: 20px; */
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.store_filter::-webkit-scrollbar {
+    display: none;
+}
+
+.store_filter .store_active_filter_choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    flex-shrink: 0;
+    font-size: 13px;
+    padding: 6px 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+    color: var(--tg-theme-subtitle-text-color);
+    z-index: 2;
+}
+
+.store_active_filter_choice img {
+    width: 15px;
+    height: 15px;
+}
+
+.store_filter .store_active_filter {
+    position: absolute;
+    bottom: 0;
+    height: 26px;
+    background-color: #7084992e;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.store .store_gifts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 5px;
+    padding-bottom: 90px;
+    padding-top: 10px;
+}
+
+@media (max-width: 400px) {
+    .store .store_gifts{
+      grid-template-columns: repeat(3, 1fr); /* Force 3 cols on small screen size. */
+    }
+  }
