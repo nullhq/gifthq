@@ -2,6 +2,7 @@
 // Our Jump component will be a tab navigation component that will be used to navigate between different sections of the app.
 
 import { useState, useCallback, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Lottie from "../Lottie/Lottie";
 import styles from "./Jump.module.css";
 
@@ -9,6 +10,7 @@ function Jump() {
     const [activeTab, setActiveTab] = useState<string>("store");
     const [underlineStyle, setUnderlineStyle] = useState<{ left: number, width: number }>({ left: 0, width: 0 });
     const jumpRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (jumpRefs.current[activeTab]) {
@@ -19,6 +21,7 @@ function Jump() {
 
     const handleTabChange = useCallback((tab: string) => {
         setActiveTab(tab);
+        navigate(tab);
     }, []);
 
     const tabs = [
