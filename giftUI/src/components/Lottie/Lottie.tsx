@@ -6,6 +6,8 @@ import { memo, useEffect, useState } from "react";
 
 interface ILottie {
     path: string;
+    autoplay?: boolean;
+    loop?: boolean;
     isActive: boolean;
     style?: React.CSSProperties;
 }
@@ -24,7 +26,7 @@ interface ILottie {
  * https://developer.mozilla.org/en-US/docs/Web/API/URL/URL
  */
    
-function Lottie({ path, isActive, style }: ILottie) {
+function Lottie({ path, autoplay=false, loop=false, isActive, style }: ILottie) {
     const [dotLottie, setDotLottie] = useState<any>(null);
 
     const dotLottieRefCallback = (instance: any) => {
@@ -45,8 +47,8 @@ function Lottie({ path, isActive, style }: ILottie) {
         <DotLottieReact
             dotLottieRefCallback={dotLottieRefCallback}
             src={path}
-            autoplay={false}
-            loop={false}
+            autoplay={autoplay}
+            loop={loop}
             style={style || { width: "26px", height: "26px" }}
         />
     );
