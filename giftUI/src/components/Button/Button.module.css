@@ -1,0 +1,43 @@
+/* Path: src/components/Button/Button.module.css */
+/* css wrapper of our custom Button components */
+
+.custom_button_ctn {
+    width: 100%;
+    min-height: 92px;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+
+    border-top: .33px solid var(--tg-theme-section-separator-color);
+    padding: 8px 16px 0px 16px;
+    background-color: var(--tg-theme-bg-color);
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.button, .button_secondary {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 8px;
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button_secondary {
+    background: none;
+    background-color: none;
+    color: var(--tg-theme-link-color);
+}
