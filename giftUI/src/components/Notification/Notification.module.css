@@ -3,7 +3,7 @@
 
 .notification {
     position: fixed;
-    bottom: -100px;
+    bottom: -150px;
     left: 50%;
     transform: translateX(-50%);
     
@@ -24,7 +24,7 @@
 }
 
 .show {
-    bottom: 100px;
+    bottom: 150px;
     opacity: 1;
 }
 
