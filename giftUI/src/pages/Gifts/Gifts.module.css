@@ -1,0 +1,56 @@
+/* Path: src/pages/Gifts/Gifts.module.css */
+/* The css wrapper of our Gifts components. */
+
+.gifts {
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.gifts .gifts_header {
+    width: 100%;
+    height: 132px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px 0;
+    gap: 8px;
+}
+
+.gifts_header h1 {
+    width: 100%;
+    text-align: center;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.43px;
+}
+
+.gifts_header p {
+    max-width: 329px;
+    text-align: center;
+
+    font-size: 17px;
+    line-height: 22px;
+    color: var(--tg-theme-subtitle-text-color);
+}
+
+.gifts .gifts_available_to_be_send_or_empty_case {
+    width: 100%;
+}
+
+.gifts_available_to_be_send_or_empty_case .gifts_available_to_be_send {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(115px, 1fr));
+    gap: 5px;
+}
