@@ -4,6 +4,7 @@
 import styles from "./Success.module.css";
 import Lottie from "../../components/Lottie/Lottie";
 import Notification from "../../components/Notification/Notification";
+import Button from "../../components/Button/Button";
 
 function Success () {
     const successEffect = new URL("../../assets/lotties/gifts/effect-gift-purchased.json", import.meta.url).href;
@@ -30,6 +31,7 @@ function Success () {
                 </div>
             </div>
             <Notification />
+            <Button label="Send Gift" labelSecondary="Open Store" />
         </div>
     );
 }
