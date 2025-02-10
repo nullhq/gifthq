@@ -1,0 +1,22 @@
+/* Path: src/pages/Leaderboard/Leaderboard.module.css */
+/* css wrapper for our Leaderboard component */
+
+.leaderboard {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.leaderboard .leaderboard_items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    padding-bottom: 95px;
+}
