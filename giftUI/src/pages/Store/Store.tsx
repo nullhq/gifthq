@@ -27,7 +27,7 @@ function Store () {
     }, [activeFilter]);
     
 
-    const headerGiftPath = new URL("../../assets/lotties/gifts/sendgift.json", import.meta.url).href;
+    const headerGiftPath = new URL("../../assets/lotties/gifts/store-ballons.json", import.meta.url).href;
     const cat = new URL("../../assets/lotties/gifts/gift-black-cat-25.lottie", import.meta.url).href;
     const pot = new URL("../../assets/lotties/gifts/gift-pot-15.lottie", import.meta.url).href;
     const stick = new URL("../../assets/lotties/gifts/gift-stick-10.lottie", import.meta.url).href;
@@ -41,8 +41,8 @@ function Store () {
         <div className={styles.store}>
             <div className={styles.store_header}>
                 <div className={styles.store_header_gift_icon_and_title}>
-                    <Lottie path={headerGiftPath} isActive={true} autoplay={true} loop={true} style={{ width:"54px", height: "54px" }}/>
-                    <h1>Send Gifts to earn $GIFT</h1>
+                    <Lottie path={headerGiftPath} isActive={true} autoplay={true} style={{ width:"54px", height: "54px" }}/>
+                    <h1>Buy and Send Gifts to earn $GIFT</h1>
                 </div>
                 <p className={styles.store_header_description}>Unique gifts for everyone by Gift HQ.</p>
             </div>
