@@ -1,0 +1,84 @@
+/* Path: src/components/LeaderboardItem.module.css */
+/* css wrapper for our leaderboard item component */
+
+.leaderboard_item {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.leaderboard_item .leaderboard_item_profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.leaderboard_item .leaderboard_item_name_gifts_rank {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    border-bottom: .33px solid var(--tg-theme-section-separator-color);
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.leaderboard_item_name_gifts_rank .leaderboard_item_name_gifts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.leaderboard_item_name_gifts h2 {
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.leaderboard_item_name_gifts p {
+    font-size: 13px;
+    color: var(--tg-theme-accent-text-color);
+}
+
+.leaderboard_item_name_gifts_rank .leaderboard_item_rank {
+    font-size: 15px;
+    color: var(--tg-theme-subtitle-text-color);
+}
+
+.leaderboard_item_its_current_user {
+    background-color: var(--tg-theme-secondary-bg-color);
+    border-top: .33px solid var(--tg-theme-section-separator-color);
+    border-bottom: none;
+    position: fixed;
+    bottom: 44px;
+}
+
+.leaderboard_item_its_current_user .leaderboard_item_name_gifts_rank {
+    border-bottom: none;
+}
+
+.leaderboard_item_tag_currentuser {
+    width: 28px;
+    height: 14px;
+    font-size: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    padding: 0 4px;
+    background-color: #70849933;
+    color: var(--tg-theme-subtitle-text-color);
+}
