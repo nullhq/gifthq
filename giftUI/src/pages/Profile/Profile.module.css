@@ -1,0 +1,201 @@
+/* Path: src/pages/Profile/Profile.css */
+/* The css wrapper for our profile component. */
+
+.profile {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 0;
+    gap: 10px;
+}
+
+
+.profile .profile_informations {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.profile_informations .profile_picture_and_username {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile_picture_and_username .profile_picture_and_rank {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.profile_picture_and_rank .profile_rank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    padding: 2px 8px;
+    font-size: 14px;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #708499dc;
+    border: solid 2px var(--tg-theme-secondary-bg-color);
+}
+
+.profile_picture_and_username .profile_username_and_received_gift {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_username_and_received_gift h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.profile_username_and_received_gift p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: var(--tg-theme-hint-color);
+}
+
+.profile_informations .profile_actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile_informations .profile_action {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--tg-theme-link-color);
+    cursor: pointer;
+}
+
+.profile_action img {
+    width: 26px;
+    height: 26px;
+}
+
+.profile .profile_gift_and_frens_tab {
+    width: 100%;
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+    padding: 0 10px;
+}
+
+.profile_gift_and_frens_tab .profile_goto_gifts,
+.profile_gift_and_frens_tab .profile_goto_frens {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.profile_goto_gifts h2, .profile_goto_frens h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--tg-theme-subtitle-text-color);
+} 
+
+.profile_goto_gifts span, .profile_goto_frens span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 15px;
+    height: 15px;
+    font-size: 8px;
+    padding: 2px;
+    border-radius: 50%;
+    color: var(--tg-theme-secondary-bg-color);
+}
+
+.profile_gift_and_frens_tab .underline {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: var(--tg-theme-accent-text-color);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile .profile_gifts_and_frens {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile_gifts_and_frens .profile_gifts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(115px, 1fr));
+    gap: 5px;
+    padding: 0 10px;
+
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.profile_gifts_and_frens .profile_frens {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    padding-bottom: 95px;
+
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.profile_gifts.active,
+.profile_frens.active {
+    opacity: 1;
+    pointer-events: initial;
+    transform: translateX(0);
+}
