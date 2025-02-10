@@ -13,7 +13,6 @@ function GiftPurchased () {
     return (
         <div className={styles.gift_purchased}>
             <Lottie path={icecream} isActive={true} autoplay={true} style={{ width: "100%"}} />
-
             <Drawer.Root
                 closeThreshold={0.5}
                 modal={true}
