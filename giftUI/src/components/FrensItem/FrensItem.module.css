@@ -1,0 +1,54 @@
+/* Path: src/components/FrensItem/FrensItem.module.css */
+/* the css wrapper for our frens item component! */
+/* Path: src/components/frensItem.module.css */
+/* css wrapper for our frens item component */
+
+.frens_item {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.frens_item .frens_item_profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.frens_item .frens_item_name_gifts_rank {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    border-bottom: .33px solid var(--tg-theme-section-separator-color);
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.frens_item_name_gifts_rank .frens_item_name_gifts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.frens_item_name_gifts h2 {
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.frens_item_name_gifts p {
+    font-size: 13px;
+    color: var(--tg-theme-accent-text-color);
+}
