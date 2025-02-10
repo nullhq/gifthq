@@ -5,6 +5,8 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Lottie from "../Lottie/Lottie";
 import styles from "./Jump.module.css";
+import fredy from "../../assets/SVGs/Itsfredy.jpg";
+import { truncateName } from "../../utils/truncate";
 
 function Jump() {
     const [activeTab, setActiveTab] = useState<string>("store");
@@ -19,6 +21,27 @@ function Jump() {
         }
     }, [activeTab]);
 
+    useEffect(() => {
+        const basePath = `/${location.pathname.split('/')[1]}`;
+
+        switch (basePath) {
+            case '/gifts':
+                setActiveTab("gifts");
+                break;
+            case '/leaderboard':
+                setActiveTab("leaderboard");
+                break;
+            case '/profile':
+                setActiveTab("profile");
+                break;
+            case '/earn':
+                setActiveTab("earn");
+                break;
+            default:
+                setActiveTab("store");
+        }
+    }, [location.pathname]);
+
     const handleTabChange = useCallback((tab: string) => {
         setActiveTab(tab);
         navigate(tab);
@@ -29,7 +52,6 @@ function Jump() {
         { name: "gifts", path: new URL("../../assets/lotties/tabs/tab-gifts.json", import.meta.url).href },
         { name: "earn", path: new URL("../../assets/lotties/tabs/tab-earn.json", import.meta.url).href },
         { name: "leaderboard", path: new URL("../../assets/lotties/tabs/tab-leaderboard.json", import.meta.url).href },
-        { name: "wallet", path: new URL("../../assets/lotties/tabs/tab-wallet.json", import.meta.url).href }
     ];
 
     return (
@@ -42,11 +64,23 @@ function Jump() {
                     ref={(el) => (jumpRefs.current[name] = el)}
                 >
                     <Lottie path={path} isActive={activeTab === name} />
-                    <p className={styles.label} style={{ color: activeTab === name ? "var(--tg-theme-accent-text-color)" : "var(--tg-theme-subtitle-text-color)" }}>
+                    <p className={styles.label} style={{ color: activeTab === name ? "var(--tg-theme-accent-text-color)" : "" }}>
                         {name.charAt(0).toUpperCase() + name.slice(1)}
                     </p>
                 </div>
             ))}
+
+            <div
+                key="profile"
+                className={styles.jump_to}
+                onClick={() => handleTabChange("profile")}
+                ref={(el) => (jumpRefs.current["profile"] = el)}
+            >
+                <img src={fredy} alt="User profile picture" />
+                <p className={styles.label} style={{ color: activeTab === "profile" ? "var(--tg-theme-accent-text-color)" : "" }}>
+                    {truncateName("It's Fredy", 8)}
+                </p>
+            </div>
             <div className={styles.underline} style={{ left: underlineStyle.left, width: underlineStyle.width }} />
         </div>
     );

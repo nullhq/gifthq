@@ -25,6 +25,12 @@
     position: relative;
 }
 
+.jump_to img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+
 .jump_to .label {
     font-size: 10px;
     font-weight: 400;
